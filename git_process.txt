@@ -1,0 +1,451 @@
+
+
+git
+
+
+https://git-scm.com/
+
+
+开源版本控制工具历史
+
+
+http://blog.sina.com.cn/s/blog_985bedb40101d09h.html
+ RCS版本管理
+
+
+git历史
+
+
+https://www.atlassian.com/git/articles/10-years-of-git
+
+
+git for windows
+
+
+Cygwin
+ mingw64
+ mintty
+输入start 就新打开了cmd
+ python交互模式有问题 用ipython
+
+
+windows git ssh 服务器
+
+
+windows git ssh 服务器
+OpenSSH (Cygwin套件)或 Copssh
+
+
+OpenSSH (Cygwin套件)
+
+
+OpenSSH for windows
+
+控制面板 windows防火墙打开22端口
+ssh-keygen -t rsa -C "aimee"
+code C:\Program Files\Git\etc\ssh\sshd_config
+修改成 HostKey /c/Users/aimee/.ssh/id_rsa
+
+运行以下命令: 
+/usr/bin/sshd
+
+以下4行代码没啥大用 
+mkgroup -l >> /etc/group
+mkgroup -d >> /etc/group
+mkpasswd -lu >> /etc/passwd
+mkpasswd -du >> /etc/passwd
+
+Git LFS
+
+
+支持大文件存储 
+
+GUI程序
+
+
+
+gitk
+
+
+
+Sourcetree
+
+
+https://www.jianshu.com/p/3431bc8429a2
+
+
+git gitHub教程
+
+
+https://guides.github.com/activities/hello-world/
+怎样使用 GitHub
+https://www.zhihu.com/question/20070065
+ git github教程
+https://segmentfault.com/a/1190000003728094
+https://segmentfault.com/a/1190000002413519
+廖雪峰的Git教程
+http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000
+ gotgit
+http://www.worldhello.net/gotgit/
+http://www.worldhello.net/gotgithub/#
+ pro-git书
+https://git-scm.com/book/zh/v2
+
+git config --global user.name "aimee"
+git config --global user.email "zhangyinghui@ori-gene.cn"
+
+Git还差什么？版本控制中还有什么痛点？
+https://www.zhihu.com/question/264018061/answer/305741919
+
+
+git工作流
+
+
+
+Git工作流指南：Pull Request工作流
+http://blog.jobbole.com/76854/
+我们是怎么做Code Review的
+https://www.cnblogs.com/wenhx/p/How-We-Code-Review.html
+
+
+gitlab工作流
+
+
+http://www.15yan.com/topic/yi-dong-kai-fa-na-dian-shi/6yueHxcgD9Z/ 浅析GitLab Flow的十一个规则
+https://www.cnblogs.com/linuxprobe/p/5778525.html
+ GitLab 工作流概览
+https://linux.cn/article-8503-1.html?utm_source=rss&utm_medium=rss
+ gitlab多人协同工作
+gitlab多人协同工作.pdf
+
+
+在线代码托管
+
+
+
+github
+
+
+https://github.com/ xuanyuanXIV
+
+
+Bitbucket
+
+
+https://bitbucket.org/ 
+
+
+gitlab
+
+
+https://gitlab.com/users/sign_in
+
+
+码云
+
+
+https://gitee.com/
+
+
+自建代码托管
+
+
+
+gitLab
+
+
+GitLab 本地github
+http://223.71.159.162:8500/
+ #hk xuanyuanXIV s2
+https://about.gitlab.com/
+
+
+安装卸载与配置
+
+
+安装见官网
+
+sudo gitlab-ctl reconfigure
+
+前提：必须在Gitlab运行状态下才能卸载
+
+sudo gitlab-ctl uninstall 
+sudo dpkg -r gitlab-ce 
+sudo rpm -e gitlab-ce
+sudo netstat -tulpn | grep :8080
+
+配置 
+vim /etc/gitlab/gitlab.rb
+external_url 'http://223.71.159.162'
+gitlab_rails['gitlab_shell_ssh_port'] = 422
+unicorn['port'] = 8082
+gitlab-ctl reconfigure
+gitlab-ctl restart
+/var/opt/gitlab/git-data/repositories/
+wiki markdown
+
+参考教程
+
+
+企业级GitLab仓库环境构建
+http://blog.51cto.com/zhaochj/1737738
+ Ruby专题①：轻松搭建本地GitHub | 你的私人小秘书 | 并发Ruby
+https://www.jianshu.com/p/4c6039808726
+
+
+GitLab版本管理
+https://www.cnblogs.com/wintersun/p/3930900.html
+
+
+centos7
+http://blog.csdn.net/qqhjqs/article/details/52950147
+https://www.jianshu.com/p/b39101c8d37e
+
+
+gitlab一定要nigx服务器吗
+https://zhidao.baidu.com/question/627821729225898244.html
+ Gitlab安装使用及汉化配置
+http://blog.csdn.net/wh211212/article/details/72627803
+ gitlab常规维护命令
+http://blog.csdn.net/x6_9x/article/details/64929868
+ Git / Gitlab 奇淫技巧
+http://blog.csdn.net/majiakun1/article/details/50726606
+安装调试gitlab/gitlab-ce容器时遇到的502 Whoops, GitLab is taking too much time to respond
+http://blog.csdn.net/snowglede/article/details/74911101
+ ubuntu 卸载 gitlab
+http://blog.csdn.net/guitarbar/article/details/50342573
+https://www.cnblogs.com/shansongxian/p/6599144.html
+
+
+gollum
+
+
+gollum 是github的使用的一个基于markdown的 wiki系统
+https://github.com/gollum/gollum
+
+apt-get install ruby ruby-dev make zlib1g-dev libicu-dev build-essential git
+gem install gollum
+gem install github-markdown
+
+gollum:给wiki插上git的翅膀 - 简书
+https://www.jianshu.com/p/9c35812b9bae
+
+
+https://www.jianshu.com/p/74c5b72c05ea
+
+
+http://ju.outofmemory.cn/entry/211798
+
+
+https://www.jianshu.com/p/74c5b72c05ea 
+
+jekyll
+
+
+简单的免费的Blog生成工具
+
+
+gitblit gogs
+
+
+gitlab like
+http://www.gitblit.com/
+https://gogs.io/ 
+
+mercurial
+
+
+TortoiseHg
+ python写的
+Git Vs Mercurial hg?
+http://www.uml.org.cn/pzgl/201202092.asp
+
+
+git使用
+
+
+
+git 账号
+
+一个linux账号 一个账号
+git config user.name
+git config user.email
+git config --global user.name "xuanyuanXIV"
+git config --global user.email "z6267@126.com"
+
+https://www.jianshu.com/p/89cb26e5c3e8 
+
+config
+
+
+.git/config 
+[receive] denyCurrentBranch = ignore
+
+概念
+
+工作区 -> 暂存区 -> 版本库
+HEAD 最新版本
+HEAD     上两个版本
+HEAD -> master分支 -> 版本commit
+分支
+X------------master 非常稳定
+X------------dev 不稳定
+X------------feature
+X------------bugfix
+远程共享库
+远程普通库
+
+基础
+
+git config --global user.name "xuanyuanXIV"
+git config --global user.email "z6267@126.com"
+git init
+git init --bare
+
+ 
+git add git rm
+git commit -m ""
+git checkout -- readme.txt
+git reset HEAD file
+git reset --hard
+git status
+git log
+git log --pretty=oneline
+git log --graph --pretty=oneline --abbrev-commit
+git reflog
+git diff
+git stash
+git stash list
+git stash pop
+git stash apply stash@{0}
+git stash drop
+
+分支
+
+git branch -a
+git branch dev
+git branch -d dev
+git branch -D fff 强删
+git checkout dev
+git checkout -b dev
+git merge dev (work on master)
+git merge dev --no-ff -m "merge with no-ff"
+
+标签
+
+git tag
+git tag v1.0 
+git tag -a v0.5 -m "version 0.1 released" 3628164
+git tag -d v0.1
+git show
+
+远程
+
+git remote -v 关联远程库
+git remote add origin ssh://git@223.71.159.162:422/xuanyuanXIV/ggg.git 关联上
+git remote rm origin
+git clone ssh://git@223.71.159.162:422/xuanyuanXIV/ggg.git
+git push -u origin master 推送加关联
+git push origin master 推送
+git push <远程主机名> <本地分支名>:<远程分支名>
+git push origin --tags
+git push origin v1.0
+git tag -d v0.1
+git push origin :refs/tags/v0.5
+
+git fetch
+git pull
+git checkout -b 本地分支名 origin/远程分支名
+
+github gitlab
+
+ssh-keygen -t rsa -C "youremail@example.com"
+fork
+一定要fork到自己的账号下再clone仓库，这样你才能推送修改。
+如果直接克隆，因为没有权限，你将不能推送修改。
+pull request
+
+忽略文件
+
+工作区 .gitignore https://github.com/github/gitignore
+git add -f App.class
+git check-ignore -v App.class
+# Windows:
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+# Python:
+*.py[cod]
+*.so
+*.egg
+*.egg-info
+dist
+build
+# My configurations:
+db.ini
+deploy_key_rsa
+git add -f App.class
+
+环境
+
+
+1.-global参数是全局参数，也就是这些命令在这台电脑的所有Git仓库下都有用。
+
+
+~/.gitconfig ./.git/config 
+git config --global user.name "xuanyuanXIV"
+git config --global user.email "z6267@126.com"
+git config --global color.ui true
+git config --global alias.st status
+
+Git服务器
+
+apt-get install git
+adduser git
+禁用shell登录
+git:x:1001:1001:,,,:/home/git:/usr/bin/git-shell
+sudo git init --bare sample.git
+
+git alias
+
+alias perl='/c/Perl64/bin/perl'
+alias ipython='winpty ipython.exe'
+alias ls='ls -F --color=auto --show-control-chars'
+alias ll='ls -alF'
+alias lt='ll -tr'
+#git
+alias gconfig='git config'
+alias gss='git status'
+alias gl='git log --graph --pretty=oneline --abbrev-commit'
+alias gla='git log -1'
+alias glg='git log --color --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit'
+alias glog='git log'
+alias greflog='git reflog'
+
+alias ga='git add'
+alias gcm='git commit -m'
+alias grs='git reset --hard'
+alias greset='git reset'
+alias gstash='git stash'
+alias gtag='git tag'
+alias gdiff='git diff'
+alias grm='git rm'
+
+alias gbranch='git branch'
+alias gcheckout='git checkout'
+alias gmerge='git merge'
+alias gmergen='git merge --no-ff -m'
+
+alias gremote='git remote'
+alias gpush='git push'
+alias gclone='git clone'
+alias gpull='git pull'
+alias gfetch='git fetch'
+for cmd in gconfig gss gl gla glg glog greflog ga gcm grs greset gstash gtag gdiff grm gbranch gcheckout gmerge gmergen gremote gpush gclone gpull gfetch
+do
+	$cmd --version
+done
+ 
+ 
+
+您的足迹: • git 
